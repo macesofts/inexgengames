@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>iNexGen Games - Your Reliable Partner in Games/Apps Development</title>
+		<link href="images/favicon-2.png" rel="shortcut icon" type="image/x-icon">
+		<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700,800,600,500,300,200' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/default.css"/>
+		<!--[if lte IE 7]>
+		<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+		<![endif]-->
+
+		<!--jquery library-->
+		<script  src="scripts/jquery-1.8.3.min.js"></script>
+		<!--/jquery library-->
+
+		<!--jquery easing-->
+		<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+		<!--/jquery easing-->
+		<!--auto complete-->
+		<script type='text/javascript' src='scripts/autocomplete/jquery.autocomplete.min.js'></script>
+		<link rel="stylesheet" type="text/css" href="scripts/autocomplete/jquery.autocomplete.css" />
+		<!--/auto complete-->
+		<!--nivo slider plugin for jquery-->
+		<script type="text/javascript" src="scripts/nivo-slider/jquery.nivo.slider.js"></script>
+		<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/nivo-slider.css"/>
+		<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/themes/default/default.css"/>
+		<!--/ nivo slider plugin for jquery-->
+		<!--superfish dropdown-->
+		<link rel="stylesheet" type="text/css" href="scripts/superfish/css/superfish.css"/>
+		<script type="text/javascript" src="scripts/superfish/js/superfish.js"></script>
+		<script type="text/javascript" src="scripts/superfish/js/hoverIntent.js"></script>
+		<script type="text/javascript" src="scripts/superfish/js/jquery.bgiframe.min.js"></script>
+		<script type="text/javascript" src="scripts/superfish/js/supersubs.js"></script>
+		<script type="text/javascript" src="scripts/iscroll.js"></script>
+		<!--/superfish dropdown-->
+
+		<!--misc. scripts-->
+		<script type="text/javascript" src="scripts/scripts.js"></script>
+		<style>
+			* {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			html {
+				-ms-touch-action: none;
+			}
+
+			.portfolioBoxContainer {
+				background: #000;
+				min-height: 420px;
+			}
+			.portfolio-slider #videoFrame {
+				-webkit-transition: all 1s ease-in;
+				-moz-transition: all 1s ease-in;
+				transition: all 1s ease-in;
+			}
+
+			.sidebar {
+				float: left;
+				width: 35%;
+				background: #000;
+				overflow: hidden;
+				border-right:1px solid #7f7f7f;
+			}
+			.rightBox-video {
+				float: right;
+				width: 65%;
+				background: #000;
+				text-align: center;
+			}
+			.frameTitle {
+				width: 98%;
+				font-family: Arial;
+				font-size: 14pt;
+				text-align: center;
+				height: 30px;
+				margin-top: 10px;
+				border-bottom: solid 1px #3f3f3f;
+				color: #f7931b;
+			}
+			#demoTitle {
+				position: absolute;
+				display: none;
+				width: 100px;
+				min-height: 25px;
+				background: #000;
+				border: solid 1px #7f7f7f;
+				-webkit-transition: all 0.5s ease-in;
+				-moz-transition: all 0.5s ease-in;
+				transition: all 0.5s ease-in;
+			}
+			#portfolio-list {
+				list-style: none;
+				float: left;
+				width: 100%;
+				margin-left: 10px;
+				margin-top: 10px;
+			}
+			#portfolio-list li {
+				width: 100px;
+				height: 80px;
+				margin: 4px;
+				display: inline-block;
+				-webkit-transition: all 0.5s ease-in;
+				-moz-transition: all 0.5s ease-in;
+				transition: all 0.5s ease-in;
+				cursor: pointer;
+				opacity: 0.3;
+				background: #000;
+				overflow: hidden;
+				border-bottom: 1px solid #000;
+			}
+			#portfolio-list li img {
+				width: 100%;
+				height: 60px;
+			}
+			#portfolio-list li .demoTitle {
+				color: #f7931b;
+				width: 100%;
+				height: 20px;
+				text-align: center;
+			}
+			#portfolio-list li:hover {
+				opacity: 1;
+			}
+			#portfolio-list li.selected {
+				opacity: 1;
+				border-bottom: 1px solid #7f7f7f;
+				color: #fff;
+			}
+			#scroller {
+				z-index: 1;
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+				-webkit-transform: translateZ(0);
+				-moz-transform: translateZ(0);
+				-ms-transform: translateZ(0);
+				-o-transform: translateZ(0);
+				transform: translateZ(0);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-text-size-adjust: none;
+				-moz-text-size-adjust: none;
+				-ms-text-size-adjust: none;
+				-o-text-size-adjust: none;
+				text-size-adjust: none;
+				
+			}
+
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var videoID = [];
+				var tempX = 0;
+				var tempY = 0;
+				videoID = ["KqTrwNwRHxw", "p1qdmjSfcfE", "WfJBCE81oDg", "Tf_xebhffBI", "OPtomtlLds0", "AHTus5KxFoI", "8EHgvkgTSFA", "xSfeSj2UIEA", "MjvPqH7fWBE", "A7TieYrt8I4", "QYSa34Ov1Mg", "K7vE4BtuOns"];
+				var images = [];
+				var videoTag = [];
+				videoTag = ["Igloo (5 Reel)", "Classic Slots (5 Reel)", "Dark Magic (3 Reel)", "Golf (5 Reel)", "Keno", "Kings Tomb (5 Reel)", "Poolside Poker (Card Game)", "Treasure Of Deep (5 Reel)", "War (Card Game)", "Western Holdem Card Game", "Woodland Magic(3 Reel)", "Reeled In (3 Reel)"];
+				images = ["Igloo.jpg", "ClassicSlots.jpg", "Darkmagic.jpg", "Golf.jpg", "Keno.jpg", "KingsTomb.jpg", "Poolside.jpg", "tod.jpg", "war.jpg", "western.jpg", "woodland.jpg", "reeledin.jpg"];
+				var videohost = "http://www.youtube.com/embed/";
+				function generateList() {
+					$("#portfolio-list").empty();
+					for (var i = 0; i < videoTag.length; i++) {
+						$("#portfolio-list").append("<li id='list_" + i + "'><img src='thumps/" + images[i] + "' alt='image' class='img'/><div class='demoTitle'>" + videoTag[i] + "</div></li>");
+					}
+
+				}
+
+				function unload() {
+					$("#portfolio-list li").each(function(index, dom) {
+						$(dom).removeClass("selected");
+					});
+				}
+
+				function loadVideo() {
+					$("#portfolio-list li").each(function(index, dom) {
+						$(dom).removeClass("selectedList");
+						var pl = document.getElementById("player");
+						$(this).click(function() {
+							unload();
+							$(this).addClass("selected");
+							//$("#videoFrame").empty();
+							//$("#videoFrame").html("<div class='frameTitle'>" + videoTag[$(dom).attr("id").split("_")[1]] + "</div><iframe  width='640' height='320' src='" + vidoehost + videoID[$(dom).attr('id').split('_')[1]] + "?rel=0' frameborder='0' allowfullscreen='0'></iframe>");
+							
+							pl.onload=function(){
+									$("#frameTitle").html(videoTag[$(dom).attr("id").split("_")[1]]);
+							}						
+							pl.src = videohost + videoID[$(dom).attr('id').split('_')[1]]+"?rel=0"; 	
+						});
+					});
+				}
+
+				function movetag(e) {
+					var elem, evt = e ? e : event;
+					if (evt.srcElement)
+						elem = evt.srcElement;
+					else if (evt.target)
+						elem = evt.target;
+
+					tempX = evt.clientX + document.body.scrollLeft;
+					tempY = evt.clientY + document.body.scrollTop;
+
+					var title_ele = $("#demoTitle");
+					title_ele.css('opacity', 1);
+					title_ele.css('top', tempY + 10 + "px");
+					title_ele.css('left', tempX + 10 + "px");
+					return true;
+				}
+
+				generateList();
+				loadVideo();
+				window.onscroll = function() {
+				}
+			});
+		</script>
+	</head>
+
+	<!--body-->
+	<body>
+		<!--/sliding login panel-->
+		<div id="body-wrapper">
+
+			<!--header container-->
+			<div id="header-contanier">
+
+				<!--header wrapper-->
+				<div id="header" class="center-clear">
+
+					<!--logo-->
+					<div id="logo">
+						<!--logo here-->
+					</div>
+					<!-- /logo-->
+
+					<!--banner 468x60-->
+					<div id="banner_468x60">
+
+					</div>
+					<!-- /banner 468x60-->
+
+					<!--header place holder-->
+					<div class="header-place-holder"></div>
+
+					<!--social tabs-->
+					<ul id="social_tabs">
+						<li>
+							<a href="http://www.facebook.com/inexgengames" target="_blank"><img src="images/social_icons/f.png" width="32" height="32" alt="" /></a>
+						</li>
+						<li>
+							<a href="https://twitter.com/inexgengames" target="_blank"><img src="images/social_icons/t.png" width="32" height="32" alt="" /></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/inexgengames" target="_blank"><img src="images/social_icons/y.png" width="30" height="30" alt="" /></a>
+						</li>
+					</ul>
+					<!-- /social tabs-->
+
+					<!--menu-->
+					<ul id="top_menu" class="sf-menu">
+						<li>
+							<a href="index.html">HOME</a><span>Get Started</span>
+						</li>
+						<li>
+							<a href="aboutus.html">ABOUT US</a><span>Who we are</span>
+							<!--first level dropdown menu-->
+							<!--/first level dropdown menu-->
+						</li>
+						<li>
+							<a href="#"><span class="mainmenuActive">PORTFOLIO</span></a><span>View our works</span>
+							<!--first level dropdown menu-->
+						</li>
+						<li>
+							<a href="contactus.html">CONTACT</a><span>Reach us</span>
+						</li>
+						<li>
+							<a href="careers.html">CAREERS</a><span>Work with us</span>
+						</li>
+					</ul>
+					<!-- /menu-->
+
+					<!--search box-->
+					<div id="search_box">
+
+						<form method="post" name="form_search" id="form_search" class="form_search" action="http://incorporate.ozythemes.com/all_elements.html">
+							<input type="text" name="txt_search" id="txt_search" class="txt_search" value="search" />
+							<input type="submit" name="btn_search" id="btn_search" class="btn_search" value="" />
+						</form>
+					</div>
+					<!-- /search box-->
+
+				</div>
+
+			</div>
+			<!-- /header wrapper-->
+
+			<!--content container-->
+			<div id="content_container" class="center-clear">
+				<div class="clear20"></div>
+				<div class="portfolioBoxContainer">
+					<div class="sidebar">
+						
+						<div class='frameTitle'>
+							Game Portfolio
+						</div>
+						<div id="scroller">
+							<ul id="portfolio-list">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+						<div class="clear20"></div>
+					</div>
+					<div class="rightBox-video">
+						<div class="portfolio-slider" id="videoFrame">
+							<div class='frameTitle' id="frameTitle">
+								Igloo (5 reel)
+							</div>
+							<iframe width="640" height="360" src="http://www.youtube-nocookie.com/embed/KqTrwNwRHxw?rel=0" frameborder="0" allowfullscreen id="player"></iframe>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="disclaimer">
+					*All the images and videos belong to our respective client, either we have worked on this project or developed its pilot/demo. Copyright of the image is with respective client.
+				</div>
+			</div>
+			<div class="clear-20"></div>
+
+		</div>
+		<!--footer-->
+		<div id="footer_container">
+			<div id="footer" class="center-clear">
+				<ul>
+					<li>
+						<a href="index.html" >HOME</a>
+					</li>
+					<li>
+						<a href="aboutus.html" >ABOUT US</a>
+					</li>
+					<li>
+						<a href="#" class="active">PORTFOLIO</a>
+					</li>
+					<li>
+						<a href="contactus.html">CONTACT</a>
+					</li>
+					<li>
+						<a href="careers.html">CAREERS</a>
+					</li>
+				</ul>
+				<div>
+					copyright &copy; 2013 inexgengames.com
+				</div>
+			</div>
+		</div>
+
+		<!-- /footer-->
+	</body>
+	<!-- /body -->
+
+</html>

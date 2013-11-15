@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>iNexGen Games - Your Reliable Partner in Games/Apps Development</title>
+		<link href="images/favicon-2.png" rel="shortcut icon" type="image/x-icon">
+		<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700,800,600,500,300,200' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/default.css"/>
+		<!--[if lte IE 7]>
+		<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+		<![endif]-->
+
+		<!--jquery library-->
+		<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+		<!--/jquery library-->
+
+		<!--jquery easing-->
+		<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+		<!--/jquery easing-->
+
+		<!--nivo slider plugin for jquery-->
+		<script type="text/javascript" src="scripts/nivo-slider/jquery.nivo.slider.js"></script>
+		<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/nivo-slider.css"/>
+		<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/themes/default/default.css"/>
+		<!--/ nivo slider plugin for jquery-->
+
+		<!--superfish dropdown-->
+		<link rel="stylesheet" type="text/css" href="scripts/superfish/css/superfish.css"/>
+		<script type="text/javascript" src="scripts/superfish/js/superfish.js"></script>
+		<script type="text/javascript" src="scripts/superfish/js/hoverIntent.js"></script>
+		<script type="text/javascript" src="scripts/superfish/js/jquery.bgiframe.min.js"></script>
+		<script type="text/javascript" src="scripts/superfish/js/supersubs.js"></script>
+		<!--/superfish dropdown-->
+
+		<!--auto complete-->
+		<script type='text/javascript' src='scripts/autocomplete/jquery.autocomplete.min.js'></script>
+		<link rel="stylesheet" type="text/css" href="scripts/autocomplete/jquery.autocomplete.css" />
+		<!--/auto complete-->
+
+		<!--misc. scripts-->
+		<script type="text/javascript" src="scripts/scripts.js"></script>
+		<script type="text/javascript" src="scripts/jquery-backgroundpos/jquery.backgroundpos.pack.js"></script>
+		<!--/misc. scripts-->
+
+		<script type="text/javascript" src="scripts/demo/colorpicker/js/colorpicker.js"></script>
+		<link rel="stylesheet" type="text/css" href="scripts/demo/colorpicker/css/colorpicker.css" />
+
+		<script type="text/javascript" src="scripts/demo/demo.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#btnSubmit").click(function(){
+					validateForm();
+					
+				});
+				$("#btnReset").click(function(){
+					reset();	
+				});
+				function reset(){
+					if($("#name_error").hasClass('invalid')||$("#name_error").hasClass('valid')){
+						$("#name_error").removeClass('valid');
+						$("#name_error").removeClass('invalid');
+						$("#name_error").addClass('normalinput');	
+					}
+					if($("#email_error").hasClass('invalid')||$("#email_error").hasClass('valid')){
+						$("#email_error").removeClass('valid').removeClass('invalid').addClass('normalinput');	
+					}
+					if($("#message_error").hasClass('invalid')||$("#message_error").hasClass('valid')){
+						$("#message_error").removeClass('valid').removeClass('invalid').addClass('normalinput');	
+					}
+					$("#txt_name").focus();
+					$("#txt_email").val("");
+					$("#txt_name").val("");
+					$("#txt_message").val("");
+					
+				}
+				function validateForm() {
+					//alert("function called");
+					var _email = $("#txt_email").val();
+					var _name = $("#txt_name").val();
+					var _message = $("#txt_message").val();
+					var atpos = String(_email).indexOf("@");
+					var dotpos = String(_email).lastIndexOf(".");
+					if (_name.length <=0 ) {
+						$("#txt_name").focus();
+						$("#name_error").addClass('invalid');
+						return false;
+					}
+					else
+					{
+						$("#name_error").removeClass('invalid').addClass('valid');
+					}
+					if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= _email.length) {						
+						$("#txt_email").focus();
+						$("#email_error").addClass('invalid');
+						return false;
+					}
+					else{
+						$("#email_error").removeClass('invalid').addClass('valid');
+					}
+					
+					if (_message.length <=0) {
+						$("#message_error").addClass('invalid');
+						$("#txt_message").focus();
+						return false;
+					}
+					else{
+						$("#message_error").removeClass('invalid').addClass('valid');
+					}
+					$.ajax({
+						url : "http://www.inexgengames.com/mail.php",
+						type : "POST",
+						data : {
+							txt_email : _email,
+							txt_name:_name,
+							txt_message:_message 
+						},
+						dataType : "html",
+						success:function(){
+							$("#message_box_place_holder").html("Thank you for your kind, We Will get you soon!")
+						},
+						error:function(){
+							$("#message_box_place_holder").html("Sorry! Some inconvenience, try later")						
+						},
+						
+					});
+
+				}
+
+			});
+
+		</script>
+	</head>
+
+	<!--body-->
+	<body>
+		<div id="body-wrapper">
+			<!--header container-->
+			<div id="header-contanier">
+
+				<!--header wrapper-->
+				<div id="header" class="center-clear">
+
+					<!--logo-->
+					<div id="logo">
+						<!--logo here-->
+					</div>
+					<!-- /logo-->
+
+					<!--banner 468x60-->
+					<div id="banner_468x60">
+
+					</div>
+					<!-- /banner 468x60-->
+
+					<!--header place holder-->
+					<div class="header-place-holder"></div>
+
+					<!--social tabs-->
+					<ul id="social_tabs">
+						<li>
+							<a href="http://www.facebook.com/inexgengames" target="_blank"><img src="images/social_icons/f.png" width="32" height="32" alt="" /></a>
+						</li>
+						<li>
+							<a href="https://twitter.com/inexgengames" target="_blank"><img src="images/social_icons/t.png" width="32" height="32" alt="" /></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/inexgengames" target="_blank"><img src="images/social_icons/y.png" width="30" height="30" alt="" /></a>
+						</li>
+					</ul>
+					<!-- /social tabs-->
+
+					<!--menu-->
+					<ul id="top_menu" class="sf-menu">
+						<li>
+							<a href="index.html">HOME</a><span>Get Started</span>
+						</li>
+						<li>
+							<a href="aboutus.html">ABOUT US</a><span>Who we are</span>
+							<!--first level dropdown menu-->
+							<!--/first level dropdown menu-->
+						</li>
+						<li>
+							<a href="portfolio2.html">PORTFOLIO</a><span>View our works</span>
+
+						</li>
+						<li>
+							<a href="#"><span class="mainmenuActive">CONTACT</span></a><span>Reach us</span>
+						</li>
+						<li>
+							<a href="careers.html">CAREERS</a><span>Work with us</span>
+						</li>
+					</ul>
+					<!-- /menu-->
+
+					<!--search box-->
+					<div id="search_box">
+						<form method="post" name="form_search" id="form_search" class="form_search" action="http://incorporate.ozythemes.com/all_elements.html">
+							<input type="text" name="txt_search" id="txt_search" class="txt_search" value="search" />
+							<input type="submit" name="btn_search" id="btn_search" class="btn_search" value="" />
+						</form>
+					</div>
+					<!-- /search box-->
+
+				</div>
+
+			</div>
+			<!-- /header wrapper-->
+			<div class="clear-20"></div>
+			<div class="box-one" style="height:420px;">
+				<!--inner title-->
+				<h1 class="heading h1">&nbsp;&nbsp;&nbsp;REACH US</h1>
+				<!--/inner title-->
+
+				<div class="clear"></div>
+
+				<!--left block-->
+				<div class="alignleft_block margin-right-20 width-310">
+					<!--address-->
+					<p class="bold_only" style="color:#F90">
+						Our Address
+					</p>
+
+					<p>
+						No. 81, Floor 5B/1A,
+						<br/>
+						Valluvar Kottam High Road,
+						<br/>
+						Nungambakkam,
+						<br />
+						Chennai - 600 034,
+						<br />
+						TamilNadu,
+						<br />
+						INDIA
+						<br/>
+						Ph: +91 (44) 4264 1744
+
+					</p>
+
+					<div class="hr-two"></div>
+					<br />
+					<center>
+						<a href="#" class="button alignleft_block bold_only" id="btnContactUs">Contact Us</a>
+
+						<!--address-->
+				</div>
+				<!--/left block-->
+
+				<!--right block-->
+				<div class="alignleft_block">
+
+					<!--google maps-->
+					<p class="bold_only" style="color:#F90">
+						Map
+					</p>
+					<iframe width="619" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=209244098570718270993.0004be6942397c9d15bb2&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=13.058075,80.244141&amp;spn=0.007274,0.013604&amp;z=15&amp;output=embed"></iframe>
+					<!--/google maps-->
+				</div>
+
+				<div class="clear-20"></div>
+				<div class="hr-two"></div>
+				<div class="clear-20"></div>
+
+				</center>
+			</div>
+			<div class="clear-20"></div>
+			<div class="clear-20"></div>
+
+		</div>
+		<!--/page content wrapper-->
+		<div id="footer_container">
+			<div id="footer" class="center-clear">
+				<ul>
+					<li>
+						<a href="index.html" >HOME</a>
+					</li>
+					<li>
+						<a href="aboutus.html" >ABOUT US</a>
+					</li>
+					<li>
+						<a href="portfolio2.html">PORTFOLIO</a>
+					</li>
+					<li>
+						<a href="#" class="active">CONTACT</a>
+					</li>
+					<li>
+						<a href="careers.html">CAREERS</a>
+					</li>
+				</ul>
+				<div>
+					copyright &copy; 2013 inexgengames.com
+				</div>
+			</div>
+		</div>
+		<!-- /footer-->
+
+		</div>
+		<!-- /content container-->
+		<div id="contact_popup">
+			<div class="contact_popup_center glow">
+				<h1 class="heading h1">&nbsp;&nbsp;&nbsp;CONTACT US</h1>
+				<p class="bold_only" style="color:#Fff">
+					&nbsp;&nbsp;Your message will be sent to Swami Venkat, Founder, iNexGen Games
+				</p>
+				<form name="contact_form" id="contact_form" class="generic-form alignleft_block" action="#">
+					<p>
+						&nbsp;&nbsp;
+						<input type="text" name="txt_name" id="txt_name"  required="required"/>
+						&nbsp;&nbsp;<span id="name_error" class="normalinput"></span><label for="txt_name" style="color:#F90">NAME</label>
+						
+					</p>
+					<p>
+						&nbsp;&nbsp;
+						<input type="text" name="txt_email" id="txt_email"  required="required"/>
+						&nbsp;&nbsp;<span id="email_error" class="normalinput"></span><label for="txt_email" style="color:#F90">EMAIL</label>
+						
+					</p>
+					<p>
+						&nbsp;&nbsp;
+						<textarea rows="6" cols="4" name="txt_message" id="txt_message" required="required"></textarea>
+						&nbsp;&nbsp;<span id="message_error" class="normalinput"></span><label for="txt_message" style="color:#F90">MESSAGE</label>
+						
+					</p>
+
+					<div id="message_box_place_holder">this message from server</div>
+					<div class="hr"></div>
+					<button type="button" class="submit" id="btnReset">
+						Reset
+					</button>
+					<button type="button" class="submit" id="btnSubmit">
+						Submit
+					</button>
+					<button type="button" class="submit" id="btnClose" style="float:right">
+						Close
+					</button>
+				</form>
+
+				<div class="clear10"></div>
+			</div>
+		</div>
+		</div>
+		<!--footer-->
+
+	</body>
+	<!-- /body -->
+
+</html>

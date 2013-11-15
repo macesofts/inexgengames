@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>inexgen games</title>
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700,800,600,500,300,200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/default.css"/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+<![endif]-->
+
+<!--jquery library-->
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<!--/jquery library-->
+
+<!--jquery easing-->
+<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+<!--/jquery easing-->
+
+<!--nivo slider plugin for jquery-->
+<script type="text/javascript" src="scripts/nivo-slider/jquery.nivo.slider.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/nivo-slider.css"/>
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/themes/default/default.css"/>
+<!--/ nivo slider plugin for jquery-->
+
+<!--superfish dropdown-->
+<link rel="stylesheet" type="text/css" href="scripts/superfish/css/superfish.css"/>
+<script type="text/javascript" src="scripts/superfish/js/superfish.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/hoverIntent.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/supersubs.js"></script>
+<!--/superfish dropdown-->
+
+<!--auto complete-->
+<script type='text/javascript' src='scripts/autocomplete/jquery.autocomplete.min.js'></script>
+<link rel="stylesheet" type="text/css" href="scripts/autocomplete/jquery.autocomplete.css" />
+<!--/auto complete-->
+
+<!--misc. scripts-->
+<script type="text/javascript" src="scripts/scripts.js"></script>
+<script type="text/javascript" src="scripts/jquery-backgroundpos/jquery.backgroundpos.pack.js"></script>
+<!--/misc. scripts-->
+
+<script type="text/javascript" src="scripts/demo/colorpicker/js/colorpicker.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/demo/colorpicker/css/colorpicker.css" />
+<script type="text/javascript" src="scripts/demo/demo.js"></script>
+<link rel="stylesheet" type="text/css" href="shadowbox/shadowbox.css" />
+<script type="text/javascript" src="shadowbox/shadowbox.js"></script>
+
+<link href="css/slider.css" rel="stylesheet" type="text/css" />
+<script src="scripts/jquery-slider.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+<script src="scripts/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+
+			});  
+				
+
+
+</script>
+</head>
+
+<!--body-->
+<body>
+	<!--background changer-->
+    <div id="background_changer">
+    	<div class="alignleft_block backgrounds">
+			<ul id="theme_roller_list">
+            	<li><a href="#">Color</a>
+                	<div>
+						<span id="color_picker" class="alignleft_block"></span>
+                    </div>
+                </li>
+                <li><a href="#">Pattern</a>
+                	<div id="background_patterns">
+                        <a href="0.html"><img src="images/background/page_tile_0.png" width="24" height="24" alt=""/></a>
+                        <a href="1.html"><img src="images/background/page_tile_1.png" width="24" height="24" alt=""/></a>
+                        <a href="2.html"><img src="images/background/page_tile_2.png" width="24" height="24" alt=""/></a>
+                        <a href="3.html"><img src="images/background/page_tile_3.png" width="24" height="24" alt=""/></a>
+                        <a href="4.html"><img src="images/background/page_tile_4.png" width="24" height="24" alt=""/></a>
+                        <a href="5.html"><img src="images/background/page_tile_5.png" width="24" height="24" alt=""/></a>
+                        <a href="6.html"><img src="images/background/page_tile_6.png" width="24" height="24" alt=""/></a>
+                        <a href="7.html"><img src="images/background/page_tile_7.png" width="24" height="24" alt=""/></a>
+                        <a href="8.html"><img src="images/background/page_tile_8.png" width="24" height="24" alt=""/></a>                        
+                        <a href="9.html"><img src="images/background/page_tile_9.png" width="24" height="24" alt=""/></a>
+                        <a href="10.html"><img src="images/background/page_tile_10.png" width="24" height="24" alt=""/></a>
+                        <a href="11.html"><img src="images/background/page_tile_11.png" width="24" height="24" alt=""/></a>
+                        <a href="12.html"><img src="images/background/page_tile_12.png" width="24" height="24" alt=""/></a>                                                                        
+                        <a href="13.html"><img src="images/background/page_tile_13.png" width="24" height="24" alt=""/></a>                        
+                    </div>
+                </li>
+                <li><a href="#">Background</a>
+                	<div id="background_images">
+                        <a href="1.html"><img src="images/background/bg01.jpg" width="154" alt=""/></a>
+                        <a href="2.html"><img src="images/background/bg02.jpg" width="154" alt=""/></a>
+                        <a href="3.html"><img src="images/background/bg03.jpg" width="154" alt=""/></a>
+                        <a href="4.html"><img src="images/background/bg04.jpg" width="154" alt=""/></a>
+                        <a href="5.html"><img src="images/background/bg05.jpg" width="154" alt=""/></a>                                                                                                
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="alignleft_block open_close">
+			<a href="#" class="arrow">OPEN</a>
+        </div>
+    </div>
+    <!--/background changer-->    
+
+	<!--sliding login panel-->
+	<div id="login_panel">
+    	<div id="content">
+        	<div>
+				<div class="column column1">
+	            	<!--help text, maybe-->
+                    <h3>And now some Lorem Ipsum to fill the content</h3>
+                    <p>
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent scelerisque commodo massa. Ut volutpat. Maecenas luctus augue quis velit.
+                    </p>
+                    <p>
+	                    Ut volutpat. Maecenas luctus augue quis velit. Lorem ipsum dolor sit amet, adipiscing elit. Scelerisque commodo massa. 
+                    </p>                    
+                    <p>
+                        <a href="#" class="orange-only notextdecoration">Not a member yet? Sign Up</a>
+                    </p>
+	            	<!--/help text, maybe-->
+                </div>
+                                
+				<div class="column column2">
+	                <!--user signin-->
+                    <h3>Member Login</h3>
+                    <form name="contact_form" id="contact_form" class="generic-form alignleft_block" action="http://incorporate.ozythemes.com/contact.html">
+                        <p>
+                            <input type="text" name="txt_name" id="txt_name" class="validate[required] medium-login user margin-right-10" />
+                            <input type="text" name="txt_email" id="txt_email" class="validate[required] medium-login password" />
+                        </p>
+                        <div class="clear10"></div>                                                
+                        <p>
+                            <input type="checkbox" id="chk_rememberme" name="chk_rememberme" /><label for="chk_rememberme">Remember Me</label>
+                            &nbsp;/&nbsp;
+                            <a href="#" class="orange-only notextdecoration">Forgot Password?</a>
+						</p>                     
+                           
+                        <div class="clear"></div>
+                        
+                        <a href="#" class="button alignleft_block bold_only notextdecoration" id="btnLoginNow"><span>Login Now</span></a>
+
+                    </form>
+	                <!--/user login-->
+                </div>
+            </div>
+        </div>
+    	<div id="signin_register">
+            <ul>
+                <li><span id="dateHolder"></span>&nbsp;::&nbsp;Hello Guest!</li>
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+    	</div>
+    </div>    
+    <!--/sliding login panel-->
+
+	<div id="body-wrapper">
+        
+        <!--header container-->
+        <div id="header-contanier">    
+        
+            <!--header wrapper-->
+            <div id="header" class="center-clear">   
+                     
+                <!--logo-->
+                <div id="logo">
+                    <!--logo here-->
+                </div>
+                <!-- /logo-->
+                
+                <!--banner 468x60-->
+                <div id="banner_468x60">
+                    
+                </div>
+                <!-- /banner 468x60-->                
+                                       
+                <!--header place holder-->
+                <div class="header-place-holder"></div>
+                
+                <!--social tabs-->
+                <ul id="social_tabs">
+                    <li><a href="#"><img src="images/social_icons/t.png" width="32" height="32" alt="" /></a></li>
+                    <li><a href="#"><img src="images/social_icons/f.png" width="32" height="32" alt="" /></a></li>
+                    <li><a href="#"><img src="images/social_icons/y.png" width="30" height="30" alt="" /></a></li>
+                </ul>
+                <!-- /social tabs-->
+                
+                <!--menu-->
+                <ul id="top_menu" class="sf-menu">
+                    <li><a href="index.html">HOME</a><span>Get Started</span></li>
+                    <li><a href="aboutus.html">ABOUT US</a><span>Who we are</span>
+                        <!--first level dropdown menu-->
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#"><span class="mainmenuActive">PORTFOLIO</span></a><span>View our works</span>
+                       
+                    </li>
+                    <li><a href="contactus.html">CONTACT</a><span>Reach us</span></li>           
+                </ul>
+                <!-- /menu-->
+                
+                <!--search box-->
+                <div id="search_box">
+                    <form method="post" name="form_search" id="form_search" class="form_search" action="http://incorporate.ozythemes.com/all_elements.html">
+                        <input type="text" name="txt_search" id="txt_search" class="txt_search" value="search" />
+                        <input type="submit" name="btn_search" id="btn_search" class="btn_search" value="" />
+                    </form>
+                </div>
+                <!-- /search box-->
+                
+            </div>
+            
+        </div>
+        <!-- /header wrapper-->
+        
+    
+        
+        <!--content container-->
+        <div id="content_container" class="center-clear">
+          <div class="clear20"></div>       
+          	<div class="portfolioBoxContainer">
+            		
+                    <div class="portfolioBox">
+                    	<h3>Mobile games / Apps</h3>  		
+                       <div class="gallery clearfix" id="thumpslider1">
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures.">					
+                                  <img alt="Tiger" src="images/tiger-thumb.jpg">
+                                  <div class="caption">Image 1</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/colours.jpg">
+                                  <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                                  <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg">
+                              	 <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              	 <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures.">
+                              <img alt="Tiger" class="border" src="images/tiger-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/colours.jpg">
+                              <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg">
+                              <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                            
+                       </div>
+               </div>
+              
+              <div class="portfolioBox" style="margin-left:10px;">
+              		 <h3>Social / PC Games / Apps</h3>
+                      <div class="gallery clearfix" id="thumpslider2">
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures.">					
+                                  <img alt="Tiger" src="images/tiger-thumb.jpg">
+                                  <div class="caption">Image 1</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/colours.jpg">
+                                  <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                                  <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg">
+                              	 <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              	 <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures.">
+                              <img alt="Tiger" class="border" src="images/tiger-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/colours.jpg">
+                              <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg">
+                              <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                            
+                       </div>
+               </div> 
+			</div>    
+            <div class="clear20"></div>                    
+			<div class="portfolioBoxContainer">  		
+                    <div class="portfolioBox">
+                    	<h3>Games / App Back-end</h3>
+                      <div class="gallery clearfix" id="thumpslider3">
+                               <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures.">					
+                                  <img alt="Tiger" src="images/tiger-thumb.jpg">
+                                  <div class="caption">Image 1</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/colours.jpg">
+                                  <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                                  <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg">
+                              	 <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              	 <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures.">
+                              <img alt="Tiger" class="border" src="images/tiger-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/colours.jpg">
+                              <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg">
+                              <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                            
+                       </div>
+               	</div>
+              	<div class="portfolioBox" style="margin-left:10px;">
+              		<h3>Games Art creation</h3>
+                    <div class="gallery clearfix" id="thumpslider4">
+                               <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures.">					
+                                  <img alt="Tiger" src="images/tiger-thumb.jpg">
+                                  <div class="caption">Image 1</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/colours.jpg">
+                                  <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                                  <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg">
+                              	 <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              	 <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures.">
+                              <img alt="Tiger" class="border" src="images/tiger-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/colours.jpg">
+                              <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                              <a rel="prettyPhoto[gallery1]" href="images/tiger.jpg">
+                              <img alt="Colours" class="border" src="images/colours-thumb.jpg">
+                              <div class="caption">Image 2</div>
+                              </a>
+                            
+                       </div>  
+               		</div> 
+				</div>
+           </div>    
+      
+        
+        <!-- /content container-->
+    
+        <div class="clear20"></div>
+        
+        <!--footer-->
+        <div id="footer_container">
+            <div id="footer" class="center-clear">
+                <ul>
+                    <li><a href="index.html" >HOME</a></li>
+                    <li><a href="aboutus.html" >ABOUT US</a></li>
+                    <li><a href="#" class="active">PORTFOLIO</a></li>
+                    <li><a href="contactus.html">CONTACT</a></li>
+                </ul>
+                <div>Copyright 2011 - inexgenGames.com</div>
+            </div>
+        </div>
+        <!-- /footer-->
+	
+    </div>        
+</body>
+<!-- /body -->
+
+</html>

@@ -1,0 +1,344 @@
+﻿#thumpslider1 
+{
+    width:100%;
+    height:120px;
+    margin: 0 auto;
+    padding:5px 5px;
+    background:url(loading.gif) no-repeat 50% 50%;
+    /* Do not alter the below settings */
+    white-space:nowrap;
+    position:relative;
+    font-size:0px;
+}
+#thumpslider1>* {display:none;}
+  
+/*-------- div.item is each thumbnail's wrapper created by the javascript ------*/
+#thumpslider1 div.item 
+{
+    padding:2px;
+    margin-right:6px; /* this specifies the distance between each thumbnail */
+    background-color:Black;
+    border:2px solid #000;
+    text-align:center;
+    position:relative;
+}
+.caption{
+	position:relative;
+	color:#F90 !important;
+	font-size:10px;
+}
+
+#thumpslider1 img 
+{
+    border:none;
+}
+
+
+/*---------built-in navigation buttons-------*/
+#thumpslider1 .navPrev, #thumpslider1 .navNext, #thumpslider1 .navPlay, #thumpslider1 .navPause 
+{
+    width:16px; height:22px; position:absolute;  
+    background:url(navButtons.png); 
+    display:inline-block; z-index:5; cursor:pointer;
+}
+#thumpslider1 .navPrev {background-position:0 -22px;top:55px;left:-13px;}
+#thumpslider1 .navPrev:hover {background-position:0 -44px;}
+#thumpslider1 .navPrevDisabled, #thumpslider1 .navPrevDisabled:hover {background-position:0 0;cursor:default;}
+
+#thumpslider1 .navNext {background-position:-16px -22px;top:55px;right:-13px;} 
+#thumpslider1 .navNext:hover {background-position:-16px -44px;} 
+#thumpslider1 .navNextDisabled, #thumpslider1 .navNextDisabled:hover {background-position:-16px 0; cursor:default;} 
+
+#thumpslider1 .navPause, #thumpslider1 .navPlay {left:360px;top:130px; display:none;}
+#thumpslider1 .navPause {background-position:0 -66px;} 
+#thumpslider1 .navPause:hover {background-position:0 -88px;} 
+#thumpslider1 .navPlay {background-position:-16px -66px;} 
+#thumpslider1 .navPlay:hover {background-position:-16px -88px;} 
+
+.navPrev, .navPlay, .navPause, .navNext 
+{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+       
+/*---------built-in navigation bullets--------*/
+/* Note: the navBullets won't be available when "scrollByEachThumb" was set to false in the Javascript.*/
+#thumpslider1 .navBullets
+{
+    display:none;
+}
+/* --------- thump2 ------- */
+#thumpslider2
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+
+
+#thumpslider2 
+{
+    width:92%;
+    height:120px;
+    margin: 0 auto;
+    padding:5px 5px;
+    background:url(loading.gif) no-repeat 50% 50%;
+    /* Do not alter the below settings */
+    white-space:nowrap;
+    position:relative;
+    font-size:0px;
+}
+#thumpslider2>* {display:none;}
+  
+/*-------- div.item is each thumbnail's wrapper created by the javascript ------*/
+#thumpslider2 div.item 
+{
+    padding:2px;
+    margin-right:6px; /* this specifies the distance between each thumbnail */
+    background-color:Black;
+    border:2px solid #000;
+    text-align:center;
+    position:relative;
+}
+
+
+#thumpslider2 img 
+{
+    border:none;
+}
+
+
+/*---------built-in navigation buttons-------*/
+#thumpslider2 .navPrev, #thumpslider2 .navNext, #thumpslider2 .navPlay, #thumpslider2 .navPause 
+{
+    width:16px; height:22px; position:absolute;  
+    background:url(navButtons.png); 
+    display:inline-block; z-index:5; cursor:pointer;
+}
+#thumpslider2 .navPrev {background-position:0 -22px;top:55px;left:-13px;}
+#thumpslider2 .navPrev:hover {background-position:0 -44px;}
+#thumpslider2 .navPrevDisabled, #thumpslider2 .navPrevDisabled:hover {background-position:0 0;cursor:default;}
+
+#thumpslider2 .navNext {background-position:-16px -22px;top:55px;right:-13px;} 
+#thumpslider2 .navNext:hover {background-position:-16px -44px;} 
+#thumpslider2 .navNextDisabled, #thumpslider2 .navNextDisabled:hover {background-position:-16px 0; cursor:default;} 
+
+#thumpslider2 .navPause, #thumpslider2 .navPlay {left:360px;top:130px; display:none;}
+#thumpslider2 .navPause {background-position:0 -66px;} 
+#thumpslider2 .navPause:hover {background-position:0 -88px;} 
+#thumpslider2 .navPlay {background-position:-16px -66px;} 
+#thumpslider2 .navPlay:hover {background-position:-16px -88px;} 
+
+.navPrev, .navPlay, .navPause, .navNext 
+{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+       
+/*---------built-in navigation bullets--------*/
+/* Note: the navBullets won't be available when "scrollByEachThumb" was set to false in the Javascript.*/
+#thumpslider2 .navBullets
+{
+    display:none;
+}
+/* --------- Others ------- */
+#thumpslider2
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+/* --------- thump3 ------- */
+#thumpslider3
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+
+
+#thumpslider3 
+{
+    width:92%;
+    height:120px;
+    margin: 0 auto;
+    padding:5px 5px;
+    background:url(loading.gif) no-repeat 50% 50%;
+    /* Do not alter the below settings */
+    white-space:nowrap;
+    position:relative;
+    font-size:0px;
+}
+#thumpslider3>* {display:none;}
+  
+/*-------- div.item is each thumbnail's wrapper created by the javascript ------*/
+#thumpslider3 div.item 
+{
+    padding:2px;
+    margin-right:6px; /* this specifies the distance between each thumbnail */
+    background-color:Black;
+    border:2px solid #000;
+    text-align:center;
+    position:relative;
+}
+
+
+#thumpslider3 img 
+{
+    border:none;
+}
+
+
+/*---------built-in navigation buttons-------*/
+#thumpslider3 .navPrev, #thumpslider3 .navNext, #thumpslider3 .navPlay, #thumpslider3 .navPause 
+{
+    width:16px; height:22px; position:absolute;  
+    background:url(navButtons.png); 
+    display:inline-block; z-index:5; cursor:pointer;
+}
+#thumpslider3 .navPrev {background-position:0 -22px;top:55px;left:-13px;}
+#thumpslider3 .navPrev:hover {background-position:0 -44px;}
+#thumpslider3 .navPrevDisabled, #thumpslider3 .navPrevDisabled:hover {background-position:0 0;cursor:default;}
+
+#thumpslider3 .navNext {background-position:-16px -22px;top:55px;right:-13px;} 
+#thumpslider3 .navNext:hover {background-position:-16px -44px;} 
+#thumpslider3 .navNextDisabled, #thumpslider3 .navNextDisabled:hover {background-position:-16px 0; cursor:default;} 
+
+#thumpslider3 .navPause, #thumpslider3 .navPlay {left:360px;top:130px; display:none;}
+#thumpslider3 .navPause {background-position:0 -66px;} 
+#thumpslider3 .navPause:hover {background-position:0 -88px;} 
+#thumpslider3 .navPlay {background-position:-16px -66px;} 
+#thumpslider3 .navPlay:hover {background-position:-16px -88px;} 
+
+.navPrev, .navPlay, .navPause, .navNext 
+{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+       
+/*---------built-in navigation bullets--------*/
+/* Note: the navBullets won't be available when "scrollByEachThumb" was set to false in the Javascript.*/
+#thumpslider3 .navBullets
+{
+    display:none;
+}
+/* --------- Others ------- */
+#thumpslider3
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+/* --------- thump4 ------- */
+#thumpslider4
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+
+
+#thumpslider4 
+{
+    width:92%;
+    height:120px;
+    margin: 0 auto;
+    padding:5px 5px;
+    background:url(loading.gif) no-repeat 50% 50%;
+    /* Do not alter the below settings */
+    white-space:nowrap;
+    position:relative;
+    font-size:0px;
+}
+#thumpslider4>* {display:none;}
+  
+/*-------- div.item is each thumbnail's wrapper created by the javascript ------*/
+#thumpslider4 div.item 
+{
+   padding:2px;
+    margin-right:6px; /* this specifies the distance between each thumbnail */
+    background-color:Black;
+    border:2px solid #000;
+    text-align:center;
+    position:relative;
+}
+
+
+#thumpslider4 img 
+{
+    border:none;
+}
+
+
+/*---------built-in navigation buttons-------*/
+#thumpslider4 .navPrev, #thumpslider4 .navNext, #thumpslider4 .navPlay, #thumpslider4 .navPause 
+{
+    width:16px; height:22px; position:absolute;  
+    background:url(navButtons.png); 
+    display:inline-block; z-index:5; cursor:pointer;
+}
+#thumpslider4 .navPrev {background-position:0 -22px;top:55px;left:-13px;}
+#thumpslider4 .navPrev:hover {background-position:0 -44px;}
+#thumpslider4 .navPrevDisabled, #thumpslider4 .navPrevDisabled:hover {background-position:0 0;cursor:default;}
+
+#thumpslider4 .navNext {background-position:-16px -22px;top:55px;right:-13px;} 
+#thumpslider4 .navNext:hover {background-position:-16px -44px;} 
+#thumpslider4 .navNextDisabled, #thumpslider4 .navNextDisabled:hover {background-position:-16px 0; cursor:default;} 
+
+#thumpslider4 .navPause, #thumpslider4 .navPlay {left:360px;top:130px; display:none;}
+#thumpslider4 .navPause {background-position:0 -66px;} 
+#thumpslider4 .navPause:hover {background-position:0 -88px;} 
+#thumpslider4 .navPlay {background-position:-16px -66px;} 
+#thumpslider4 .navPlay:hover {background-position:-16px -88px;} 
+
+.navPrev, .navPlay, .navPause, .navNext 
+{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+       
+/*---------built-in navigation bullets--------*/
+/* Note: the navBullets won't be available when "scrollByEachThumb" was set to false in the Javascript.*/
+#thumpslider4 .navBullets
+{
+    display:none;
+}
+/* --------- Others ------- */
+#thumpslider4
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+
+
+
